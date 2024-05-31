@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name="page_name"> Halaman Kelurahan</x-slot>
+    <x-slot name="page_name"> Halaman Kelurahan loista</x-slot>
     <x-slot name="page_title"> List Data Kelurahan</x-slot>
     <x-slot name="page_content">
         <a href="{{ url('dashboard/kelurahan/create') }}" class="btn btn-primary">+ Tambah Kelurahan</a>

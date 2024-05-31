@@ -29,8 +29,8 @@ Route::get('/salam', function () {
 
 // Praktikum Laravel 2
 Route::get('/dashboard', [AdminController::class, 'index']);
-Route::get('/contact', [AdminController::class, 'index']);
-Route::get('/about', [AdminController::class, 'index']);
+Route::get('/contact', [ContactController::class, 'contact']);
+Route::get('/about', [AboutController::class, 'about']);
 
 
 
@@ -42,3 +42,7 @@ Route::get('/dashboard/pasien', [PasienController::class, 'index']);
 Route::get('/dashboard/kelurahan/create', [KelurahanController::class, 'create']);
 Route::post('/dashboard/kelurahan/store', [KelurahanController::class, 'store']);
 Route::get('/dashboard/kelurahan/show/{id}', [KelurahanController::class, 'show']);
+
+Route::get('/dashboard/pasien/create', [PasienController::class, 'create']);
+Route::post('/dashboard/pasien/store', [PasienController::class, 'store']);
+Route::get('/dashboard/pasien/show/{id}', [PasienController::class, 'show']);

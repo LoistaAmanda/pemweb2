@@ -43,7 +43,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="dashboard/pasien" class="nav-link">
+            <a href="/dashboard/pasien" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Pasien
@@ -53,7 +53,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="dashboard/kelurahan" class="nav-link">
+            <a href="/dashboard/kelurahan" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Kelurahan
