@@ -13,7 +13,7 @@
                 <th>Gender</th>
                 <th>Email</th>
                 <th>Alamat</th>
-                <th>Nama Kelurahan</th>
+                <th>Fasilitas Kesehatan</th>
                 <th>Aksi</th>
             </tr>
             @foreach ($list_pasien as $pasien)
@@ -30,7 +30,7 @@
                     <td>
                         <a href="{{ url('dashboard/pasien/show', $pasien->id) }}" class="text-primary"><i class="far fa-eye"></i> Lihat</a> |
                         <a href="#" class="text-warning"><i class="far fa-edit"></i> Edit</a> |
-                        <a href="#" class="text-danger"><i class="far fa-trash-alt"></i> Hapus</a>
+                        <a href="#" class="text-danger"><i class="far fa-trash-alt"></i> Hapus</a> |
                     </td>
                 </tr>
             @endforeach

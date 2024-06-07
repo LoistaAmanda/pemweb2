@@ -43,7 +43,7 @@ class KelurahanController extends Controller
         ]);
 
         Kelurahan::create($validated);
-        return redirect('dashboard/kelurahan');
+        return redirect('dashboard/kelurahan')->with('pesan','Data Berhasil ditambahkan');
     }
 
     /**
@@ -66,7 +66,8 @@ class KelurahanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kelurahan = Kelurahan::find($id);
+        return view('admin.kelurahan.edit', compact('kelurahan'));
     }
 
     /**
@@ -76,9 +77,18 @@ class KelurahanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, string $id)
     {
-        //
+        //validasi form input
+        $validated = $request->validate([
+            'nama' => 'required|string',
+            'kecamatan_nama' => 'required|string'
+        ]);
+
+        $kelurahan = Kelurahan::find($id);
+        $kelurahan->update($validated);
+
+        return redirect('dashboard/kelurahan')->with('pesan','Data Berhasil diperbarui');
     }
 
     /**
@@ -89,6 +99,9 @@ class KelurahanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $kelurahan = Kelurahan::find($id);
+        $kelurahan->delete();
+
+        return redirect('dashboard/kelurahan')->with('pesan','Data Berhasil di Hapus');
     }
 }
